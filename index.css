@@ -1,0 +1,174 @@
+/*STARTING*/ 
+/* GENERAL CODES*/ 
+/* p(paragraph) block 
+   H1(heads)can go up to 5 block 
+   span(inside paragraph line type) 
+   div(inside paragraph block type)
+   ul(is used to create a list)
+   LI(element of some sort of list
+   a(used to link a href/hyperlink) 
+*/
+:root { 
+   --text-color:white ;
+   --bg-url:url(./Assets/bg-mobile.jpg);
+   --stroke-color:solid,rgba(255,255,255,0.5);
+   --surface-color: rgba(255,255,255,0.05);
+   --surface-color-hover:rgba(255, 255, 255, 0.02);
+   --hightlight-color:rgba(255,255,255,0.2);
+   --switch-bg-url: url(./Assets/moon.star.svg);
+}
+
+.Light { 
+   --text-color:black;
+   --bg-url:url(./Assets/bg-mobile-light.jpg);
+   --stroke-color:solid,rgba( 0, 0, 0,0.5);
+   --surface-color:rgba( 0, 0, 0,0.05);
+   --surface-color-hover:rgba(0 ,0 ,0 ,0.02);
+   --hightlight-color:rgba(0,0,0, 0.1);
+   --switch-bg-url: url(./Assets/sun.svg)
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body { 
+
+   background-image:var(--bg-url) ;
+   background-repeat: no-repeat;
+   background-position:top center;
+   background-size: cover;
+}
+/*
+   background: url(./Assets/bg-mobile.jpg)no-repeat top center   center/cover;
+*/
+body *{ 
+   
+   font-family: "Inter", serif;
+   font-optical-sizing: auto;
+   font-weight: 500;
+   font-style: normal;
+   color: var(--text-color);
+}
+ul {
+   text-align: center;
+   list-style: none;
+   display: flex;
+   gap:16px;
+   flex-direction: column;
+
+   padding:24px 0px ;
+            
+         
+}
+
+ul li a {
+   display: flex;
+   align-items: center;
+   justify-content:center;
+
+   padding: 16px 24px;
+   
+   border:1px,var(--stroke-color);
+   border-radius: 8px;
+   background-color:var(--surface-color);
+   
+   backdrop-filter: blur(4px);
+   -webkit-backdrop-filter: blur(4px);
+   
+   text-decoration: none;
+   font-weight: 500;
+   transition: background 0.5s;
+   
+}
+ul li a:hover { 
+   border: 1.5px, solid white;
+   background-color:var(--surface-color-hover);
+}
+
+#container { 
+      width: 360px;
+      margin: auto;
+      margin-top: 56px;
+      padding: 12px 24px 0px 24px ;
+   /*abaixo temos um elemento img que se classifica como
+   inline ou seja ocupa o espaço em forma de linha
+   */   
+} 
+#profile img { 
+      display: block;/*transforma o grupo img em um tipo block*/
+      width: 112px;
+      margin: auto;
+      margin-top: 12px;
+}
+#profile p {
+   font-weight: 500;
+   text-align: center;
+   padding: 24px;
+}
+#switch {
+   position:relative;
+   width: 64px;
+   margin:4px auto;
+}
+#switch button { 
+   width: 32px;
+   height: 32px;
+   background: white var(--switch-bg-url) no-repeat center;
+   border:0px; 
+   border-radius: 50%;
+
+   position: absolute;
+   top:50% ;
+   right: 0;
+   transform: translateY(-50%);
+   z-index: 1;
+   /*essas duas linhas são usadas para fazer o alinhamento do icone no centro o top adiciona 50% ao topo e o translate remove 50%*/ 
+   
+
+
+   
+   
+}
+
+#switch span { 
+   display: block;
+   width: 64px;
+   height: 24px;
+   background-color:var(--surface-color);
+   border: 1px ,var(--stroke-color);
+   backdrop-filter: blur(4px);
+   -webkit-backdrop-filter: blur(4px);
+   border-radius: 9999px;
+}
+
+#Social_Links { 
+   display: flex;
+   justify-content: center;
+   font-size: 24px;
+
+   padding: 24px 0;
+}
+#Social_Links a {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 16px;
+   transition: background 0.2s;
+   border-radius:50%;
+}
+#Social_Links a:hover { 
+  background:var(--hightlight-color);
+
+}
+#footer {
+   padding:0px 24px ;
+   text-align: center;
+   font-size: 14px;
+}
+
+.Light #switch button{ 
+   left: 0;
+   right: initial;
+}
