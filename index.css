@@ -88,7 +88,8 @@ ul li a:hover {
 }
 
 #container { 
-      width: 360px;
+      width: 100%;
+      max-width: 570px;
       margin: auto;
       margin-top: 56px;
       padding: 12px 24px 0px 24px ;
