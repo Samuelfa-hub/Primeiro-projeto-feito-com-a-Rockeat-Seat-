@@ -39,6 +39,7 @@ body {
    background-repeat: no-repeat;
    background-position:top center;
    background-size: cover;
+   height: 100vh;
 }
 /*
    background: url(./Assets/bg-mobile.jpg)no-repeat top center   center/cover;
@@ -122,17 +123,19 @@ ul li a:hover {
 
    position: absolute;
    top:50% ;
-   right: 0;
+   left: 0;
    transform: translateY(-50%);
    z-index: 1;
    /*essas duas linhas são usadas para fazer o alinhamento do icone no centro o top adiciona 50% ao topo e o translate remove 50%*/ 
-   
+   animation: slide-out 0.2s forwards;
 
 
    
    
 }
-
+#switch button:hover{ 
+   outline: 8px solid var(--hightlight-color);
+}
 #switch span { 
    display: block;
    width: 64px;
@@ -170,6 +173,33 @@ ul li a:hover {
 }
 
 .Light #switch button{ 
-   left: 0;
-   right: initial;
+  animation: slide-in 0.2s forwards; 
+}
+/*media queryes */ 
+
+@media (min-width: 800px) {
+    :root{ 
+      --bg-url: url(./assets/bg-desktop.jpg)
+    }
+    .Light{ 
+      --bg-url: url(./assets/bg-desktop-light.jpg)
+    }
+
+
+}
+@keyframes slide-in{
+   from {
+      left: 0 ;
+   }
+   to {
+      left: 50%;
+   }
+}
+@keyframes slide-out{ 
+   from { 
+      left:50%; 
+   }
+   to { 
+      left: 0;
+   }
 }
