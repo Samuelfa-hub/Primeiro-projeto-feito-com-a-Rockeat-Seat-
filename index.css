@@ -172,17 +172,17 @@ ul li a:hover {
    font-size: 14px;
 }
 
-.light #switch button{ 
+.Light #switch button{ 
   animation: slide-in 0.2s forwards; 
 }
 /*media queryes */ 
 
 @media (min-width: 800px) {
     :root{ 
-      --bg-url: url(./assets/bg-desktop.jpg)
+      --bg-url: url(./Assets/bg-desktop.jpg)
     }
-    .light{ 
-      --bg-url: url(./assets/bg-desktop-light.jpg)
+    .Light{ 
+      --bg-url: url(./Assets/bg-desktop-light.jpg)
     }
 
 
