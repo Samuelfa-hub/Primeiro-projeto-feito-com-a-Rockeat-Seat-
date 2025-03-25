@@ -179,10 +179,10 @@ ul li a:hover {
 
 @media (min-width: 800px) {
     :root{ 
-      --bg-url: url(./Assets/bg-desktop.jpg)
+      --bg-url: url(./assets/bg-desktop.jpg)
     }
     .light{ 
-      --bg-url: url(./Assets/bg-desktop-light.jpg)
+      --bg-url: url(./assets/bg-desktop-light.jpg)
     }
 
 
