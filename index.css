@@ -25,7 +25,7 @@
    --surface-color:rgba( 0, 0, 0,0.05);
    --surface-color-hover:rgba(0 ,0 ,0 ,0.02);
    --hightlight-color:rgba(0,0,0, 0.1);
-   --switch-bg-url: url(./Assets/sun.svg)
+   --switch-bg-url: url(./Assets/sun.svg);
 }
 
 * {
@@ -172,7 +172,7 @@ ul li a:hover {
    font-size: 14px;
 }
 
-.Light #switch button{ 
+.light #switch button{ 
   animation: slide-in 0.2s forwards; 
 }
 /*media queryes */ 
@@ -181,7 +181,7 @@ ul li a:hover {
     :root{ 
       --bg-url: url(./assets/bg-desktop.jpg)
     }
-    .Light{ 
+    .light{ 
       --bg-url: url(./assets/bg-desktop-light.jpg)
     }
 
